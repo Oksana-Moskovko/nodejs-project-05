@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-project-05",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npm run build-docs",
+    "build-docs": "redocly bundle docs/openapi.yaml --ext json -o docs/swagger.json",
+    "preview-docs": "redocly preview-docs",
+    "lint": "eslint src/**/*.js",
+    "start": "node ./src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oksana-Moskovko/nodejs-project-05.git"
+  },
+  "keywords": [],
+  "author": "Oksana Moskovko <omoskovko98@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oksana-Moskovko/nodejs-project-05/issues"
+  },
+  "homepage": "https://github.com/Oksana-Moskovko/nodejs-project-05#readme",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.10",
+    "pino-pretty": "^13.1.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3",
+    "pino-http": "^11.0.0"
+  }
+}
