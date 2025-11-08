@@ -6,6 +6,7 @@ import contactRoutes from './routers/stories.js';
 import { getEnvVar } from './utils/getEnvVar.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import { errorHandler } from './middlewares/errorHandler.js';
+import { swaggerDocs } from './middlewares/swaggerDocs.js';
 
 const PORT = Number(getEnvVar('PORT', '3000'));
 
@@ -16,6 +17,8 @@ export const startServer = () => {
     type: ['application/json', 'application/vnd.api+json'],
   }));
   app.use(cors());
+
+  app.use('/api-docs', swaggerDocs());
 
   app.use(
     pino({
