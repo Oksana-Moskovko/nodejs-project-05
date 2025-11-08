@@ -5,6 +5,6 @@ import { ctrlWrapper } from '../utils/ctrlWrapper.js';
 
 const router = Router();
 
-router.get('/stories', ctrlWrapper(getStoriesController));
+router.get('/', ctrlWrapper(getStoriesController));
 
 export default router;
