@@ -80,3 +80,7 @@ responses:
                 hasPreviousPage:
                   type: boolean
                   example: true
+  '404':
+    $ref: '../../components/responses/404-NotFoundError.yaml'
+  '500':
+    $ref: '../../components/responses/500.yaml'
